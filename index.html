@@ -155,6 +155,43 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-github与域名绑定" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="github-和-个人域名绑定"><a href="#github-和-个人域名绑定" class="headerlink" title="github 和 个人域名绑定"></a>github 和 个人域名绑定</h2><p>– <strong>第一步</strong>,在阿里云购买自己的域名,在域名列表中选中需要绑定的域名解析,如下图:<br><img src="http://wx2.sinaimg.cn/mw690/a2986d9agy1ffl8jw1u52j21h6081aav.jpg" alt=""> <br><br>– <strong>第二步</strong>,填写你的IP解析，此处的IP是你github的,如我的是paul15342.github.io<br><img src="http://wx1.sinaimg.cn/small/a2986d9agy1ffl8qjyxaoj20d102qglo.jpg" alt=""><br><br>然后添加一条解析记录类型是CNAME,记录值是paul15342.github.io <br><br><img src="http://wx2.sinaimg.cn/small/a2986d9agy1ffl8kqsjurj21ge0c7wfp.jpg" alt=""><br><br>– <strong>第三步</strong>,登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名,保存<br><br><img src="http://wx1.sinaimg.cn/small/a2986d9agy1ffl8oynv8aj20go032aa4.jpg" alt=""><br><br>– <strong>第四步</strong>, 进入本地博客文件夹 ，进入hexo/source目录下，创建一个记事本文件，输入你的域名，只填写域名即可,保存，命名为CNAME ，注意保存成所有文件（不带任何后缀）<br><br><img src="http://wx1.sinaimg.cn/small/a2986d9agy1ffl8sz6n2hj209r04jaa2.jpg" alt=""><br><br>然后在git bash中一次完成下面三个指令</p>
+<blockquote>
+<p>hexo clean <br><br>hexo g <br><br>hexo d <br></p>
+</blockquote>
+<p>打开浏览器输入你的域名，即可进入到你的博客页面</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/14/github与域名绑定/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-My-first-Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
