@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>MongoDB常用指令 | 海林</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="查询 db.col.find().pretty() OR: db.col.find( { $or: [    {key1: value1}, {key2:value2} ]  }).pretty()AND: db.col.find({key1:value1, key2:value2}).pretty()    插入  db.col.insert()  / db.col.save(document">
+  <meta name="description" content="查询 db.col.find().pretty()OR: db.col.find( { $or: [    {key1: value1}, {key2:value2} ]  }).pretty()AND: db.col.find({key1:value1, key2:value2}).pretty()    插入  db.col.insert()  / db.col.save(document)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MongoDB常用指令">
 <meta property="og:url" content="http://yoursite.com/2017/05/15/MongoDB常用指令/index.html">
 <meta property="og:site_name" content="海林">
-<meta property="og:description" content="查询 db.col.find().pretty() OR: db.col.find( { $or: [    {key1: value1}, {key2:value2} ]  }).pretty()AND: db.col.find({key1:value1, key2:value2}).pretty()    插入  db.col.insert()  / db.col.save(document">
-<meta property="og:updated_time" content="2017-05-15T14:53:24.929Z">
+<meta property="og:description" content="查询 db.col.find().pretty()OR: db.col.find( { $or: [    {key1: value1}, {key2:value2} ]  }).pretty()AND: db.col.find({key1:value1, key2:value2}).pretty()    插入  db.col.insert()  / db.col.save(document)">
+<meta property="og:updated_time" content="2017-05-15T14:55:38.700Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB常用指令">
-<meta name="twitter:description" content="查询 db.col.find().pretty() OR: db.col.find( { $or: [    {key1: value1}, {key2:value2} ]  }).pretty()AND: db.col.find({key1:value1, key2:value2}).pretty()    插入  db.col.insert()  / db.col.save(document">
+<meta name="twitter:description" content="查询 db.col.find().pretty()OR: db.col.find( { $or: [    {key1: value1}, {key2:value2} ]  }).pretty()AND: db.col.find({key1:value1, key2:value2}).pretty()    插入  db.col.insert()  / db.col.save(document)">
   
     <link rel="alternative" href="/atom.xml" title="海林" type="application/atom+xml">
   
@@ -178,7 +178,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><p><strong>查询</strong> db.col.find().pretty() <br><br><strong><em>OR</em></strong>: db.col.find(<br> {</p>
+<li><p><strong>查询</strong> db.col.find().pretty()<br><strong><em>OR</em></strong>: db.col.find(<br> {</p>
 <pre><code>$or: [
    {key1: value1}, {key2:value2}
 ]
@@ -201,7 +201,7 @@
 </li>
 <li><p><strong>skip()</strong>略过<br>  <strong>limit()</strong>指定查询的条数<br>  <strong>sort()</strong>排序   db.COLLECTION_NAME.find().sort({KEY:1}) key为1 or -1 指定排序的方式</p><p></p>
 </li>
-<li><b style="color:red">索引</b>:MongoDB使用 <strong>ensureIndex()</strong>       方法来创建索引<br>  db.COLLECTION_NAME.ensureIndex({KEY:1})<br>  Key 值为你要创建的索引字段，1为指定按升序创建索引，降序索引指定为-1<br><br>  在后台创建索引实例：<br><br>  db.values.ensureIndex({open: 1, close: 1}, {background: true})<br>  通过在创建索引时加background:true 的选项，让创建工作在后台执行</li>
+<li><b style="color:red">索引</b>:MongoDB使用<strong>ensureIndex()</strong>方法来创建索引<br>  db.COLLECTION_NAME.ensureIndex({KEY:1})<br>  Key 值为你要创建的索引字段，1为指定按升序创建索引，降序索引指定为-1<br>  在后台创建索引实例：<br>  db.values.ensureIndex({open: 1, close: 1}, {background: true})<br>  通过在创建索引时加background:true 的选项，让创建工作在后台执行</li>
 </ul>
 
       
