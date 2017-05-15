@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/15/MongoDB常用指令/index.html">
 <meta property="og:site_name" content="海林">
 <meta property="og:description" content="查询  db.col.find().pretty() OR: db.col.find({   $or: [ {key1: value1}, {key2:value2}    ]}).pretty()AND: db.col.find({key1:value1, key2:value2}).pretty()    插入  db.col.insert()  / db.col.save(document">
-<meta property="og:updated_time" content="2017-05-15T14:32:51.311Z">
+<meta property="og:updated_time" content="2017-05-15T14:36:57.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB常用指令">
 <meta name="twitter:description" content="查询  db.col.find().pretty() OR: db.col.find({   $or: [ {key1: value1}, {key2:value2}    ]}).pretty()AND: db.col.find({key1:value1, key2:value2}).pretty()    插入  db.col.insert()  / db.col.save(document">
@@ -191,17 +191,13 @@
 <li><strong>查看所有数据库</strong> show dbs</li>
 <li><strong>删除集合</strong>  db.collection.drop()</li>
 <li>使用用户名和密码连接登陆到指定数据库：mongodb://admin:123456@localhost/test</li>
-<li><p><strong>条件操作符</strong></p>
-<blockquote>
+<li><strong>条件操作符</strong><blockquote>
 <p>$lt &lt;<br><br> $lte &lt;= <br> $gt &gt;<br> $gte &gt;=<br><br>$ne !=</p>
 </blockquote>
 </li>
-<li><p><strong>type 字段类型查询</strong> db.col.find({“title” : {$type : 2}})     其中2为string</p>
-</li>
-<li><p><strong>skip()</strong>略过<br><strong>limit()</strong>指定查询的条数<br><strong>sort()</strong>排序   db.COLLECTION_NAME.find().sort({KEY:1}) key为1 or -1 指定排序的方式</p>
-</li>
-<li><b style="color:red">索引</b>:MongoDB使用 <strong>ensureIndex()</strong>       方法来创建索引<br>db.COLLECTION_NAME.ensureIndex({KEY:1})<br>Key 值为你要创建的索引字段，1为指定按升序创建索引，降序索引指定为-1<br><br>在后台创建索引实例：<br><br>db.values.ensureIndex({open: 1, close: 1}, {background: true})<br>通过在创建索引时加background:true 的选项，让创建工作在后台执行</li>
 </ol>
+<p>11.<strong>type 字段类型查询</strong> db.col.find({“title” : {$type : 2}})     其中2为string</p>
+<p>12.<strong>skip()</strong>略过<br>    <strong>limit()</strong>指定查询的条数<br>    <strong>sort()</strong>排序   db.COLLECTION_NAME.find().sort({KEY:1}) key为1 or -1 指定排序的方式</p><p><br>13.<b style="color:red">索引</b>:MongoDB使用 <strong>ensureIndex()</strong>       方法来创建索引<br>    db.COLLECTION_NAME.ensureIndex({KEY:1})<br>    Key 值为你要创建的索引字段，1为指定按升序创建索引，降序索引指定为-1<br><br>    在后台创建索引实例：<br><br>    db.values.ensureIndex({open: 1, close: 1}, {background: true})<br>    通过在创建索引时加background:true 的选项，让创建工作在后台执行</p>
 
       
 
