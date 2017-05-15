@@ -176,11 +176,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><p><strong>查询</strong> db.col.find().pretty()<br><strong><em>OR</em></strong>: db.col.find(<br> {</p>
-<pre><code>$or: [
-   {key1: value1}, {key2:value2}
-]
-</code></pre><p> }<br>).pretty()<br><strong><em>AND</em></strong>: db.col.find({key1:value1, key2:value2}).pretty()  </p>
+<li><p><strong>查询</strong> db.col.find().pretty()<br><strong><em>OR</em></strong>: db.col.find(<br> {$or: [{key1: value1}, {key2:value2}]}).pretty()<br><strong><em>AND</em></strong>: db.col.find({key1:value1, key2:value2}).pretty()  </p>
 </li>
 <li><p><strong>插入</strong>  db.col.insert()  / db.col.save(document)</p>
 </li>
@@ -199,7 +195,7 @@
 </li>
 <li><p><strong>skip()</strong>略过<br>  <strong>limit()</strong>指定查询的条数<br>  <strong>sort()</strong>排序   db.COLLECTION_NAME.find().sort({KEY:1}) key为1 or -1 指定排序的方式</p><p></p>
 </li>
-<li><b style="color:red">索引</b>:MongoDB使用<strong>ensureIndex()</strong>方法来创建索引<br>  db.COLLECTION_NAME.ensureIndex({KEY:1})<br>  Key 值为你要创建的索引字段，1为指定按升序创建索引，降序索引指定为-1<br>  在后台创建索引实例：<br>  db.values.ensureIndex({open: 1, close: 1}, {background: true})<br>  通过在创建索引时加background:true 的选项，让创建工作在后台执行</li>
+<li><b style="color:red">索引</b>:MongoDB使用<strong>ensureIndex()</strong>方法来创建索引<br> db.COLLECTION_NAME.ensureIndex({KEY:1}),Key 值为你要创建的索引字段，1为指定按升序创建索引，降序索引指定为-1.<br> 在后台创建索引实例：<br> db.values.ensureIndex({open: 1, close: 1}, {background: true})<br> 通过在创建索引时加background:true 的选项，让创建工作在后台执行</li>
 </ul>
 
       
