@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>My first Blog | 海林</title>
+  <title>Tag: Two | 海林</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="搭建github + Hexo 个人博客一:安装 (Hexo文件夹中打开Git Bash Here)输入一下密令:npm install -g hexo">
-<meta name="keywords" content="ONE">
-<meta property="og:type" content="article">
-<meta property="og:title" content="My first Blog">
-<meta property="og:url" content="http://yoursite.com/2017/05/14/My-first-Blog/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="海林">
+<meta property="og:url" content="http://yoursite.com/tags/Two/index.html">
 <meta property="og:site_name" content="海林">
-<meta property="og:description" content="搭建github + Hexo 个人博客一:安装 (Hexo文件夹中打开Git Bash Here)输入一下密令:npm install -g hexo">
-<meta property="og:updated_time" content="2017-05-19T16:47:52.878Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My first Blog">
-<meta name="twitter:description" content="搭建github + Hexo 个人博客一:安装 (Hexo文件夹中打开Git Bash Here)输入一下密令:npm install -g hexo">
+<meta name="twitter:title" content="海林">
   
     <link rel="alternative" href="/atom.xml" title="海林" type="application/atom+xml">
   
@@ -138,189 +133,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-My-first-Blog" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      My first Blog
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/05/15/MongoDB常用指令/" class="archive-article-date">
+  	<time datetime="2017-05-15T14:57:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/05/15/MongoDB常用指令/">MongoDB常用指令</a>
     </h1>
   
 
-        
-        <a href="/2017/05/14/My-first-Blog/" class="archive-article-date">
-  	<time datetime="2017-05-14T04:59:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>搭建github + Hexo 个人博客</strong><br><strong>一:安装 (Hexo文件夹中打开Git Bash Here)</strong><br>输入一下密令:<br><strong>npm install -g hexo</strong><br><a id="more"></a><br><strong>二:初始化</strong><br><br>在电脑的某个地方新建一个名为hexo的文件夹（名字可以随便取），比如我的是F:hexo，由于这个文件夹将来就作为你存放代码的地方，所以最好不要随便放。<br></p>
-<blockquote>
-<p><strong>hexo init</strong> <br><br><strong>hexo g</strong> <br><br><strong>hexo s</strong>  #启动服务<br></p>
-</blockquote>
-<p><strong>三:上传到github</strong> <br><br>首先，配置好github, ssh key肯定要配置好。<br>其次，配置<strong>_config.yml</strong>中有关deploy的部分：<br><br>repo是在github中新建的资源库的链接<br><br>正确写法：</p>
-<blockquote>
-<p>deploy:<br>type: git <br><br>repository: git@github.com:liuxianan/liuxianan.github.io.git <br><br>branch: master<br></p>
-</blockquote>
-<p>然后执行hexo deploy<br>此时一般会报如下错误：<br>Deployer not found: github 或者 Deployer not found: git<br>原因是还需要安装一个插件：<br><br><strong>npm install hexo-deployer-git –save</strong><br><br><strong>_config.yml</strong><br>这里面都是一些全局配置，每个参数的意思都比较简单明了，所以就不作详细介绍了。<br>需要特别注意的地方是，冒号后面必须有一个空格，否则可能会出问题。</p>
-<p><strong>四:github中建立资源库</strong><br><br>在github中建立资源库<br><a href="https://github.com/new" target="_blank" rel="external">https://github.com/new</a>,<br>这个新仓库就将是存放你即将拥有的博客的地方<br>注意，你的仓库名不能随便取，这样会导致github混乱，<br>取名的格式应该为<strong>“用户名.github.io”</strong><br><strong>Hexo常用指令：</strong></p>
-<blockquote>
-<p>hexo new “postName”   #新建文章  <br><br>hexo new page “pageName”   #新建页面<br><br>hexo generate   #生成静态页面至public目录<br><br>hexo server   #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><br>hexo deploy   #部署到GitHub<br><br>hexo help    # 查看帮助<br><br>hexo version  #查看Hexo的版本<br></p>
-</blockquote>
-<p><strong>缩写</strong></p>
-<blockquote>
-<p><strong>hexo n</strong> == hexo new <br><br> <strong>hexo g</strong> == hexo generate<br><br> <strong>hexo s</strong> == hexo server<br><br> <strong>hexo d</strong> == hexo deploy<br></p>
-</blockquote>
-<p><strong>组合命令：</strong><br></p>
-<blockquote>
-<p>hexo s -g #组合并生成本地预览<br><br>hexo d -g #生成并上传</p>
-</blockquote>
-<p><strong>删除文章</strong></p>
-<blockquote>
-<p>本地删除后， hexo g  ,hexo d</p>
-</blockquote>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ONE</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Two</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/14/My-first-Blog/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/05/15/MongoDB常用指令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MongoDB常用指令
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-
-
-
-  
-  
-  
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "http://yoursite.com/2017/05/14/My-first-Blog/", 
-    sourceId: "My-first-Blog",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -343,9 +209,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
