@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Paul</title>
+  <title>Tag: python | Paul</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Paul">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/python/index.html">
 <meta property="og:site_name" content="Paul">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paul">
@@ -135,102 +135,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-python中Excel写入数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/07/09/python中Excel写入数据/" class="archive-article-date">
+  	<time datetime="2017-07-09T03:44:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/09/python中Excel写入数据/">python中Excel写入数据</a>
+      <a class="archive-article-title" href="/2017/07/09/python中Excel写入数据/">python中Excel写入数据</a>
     </h1>
   
 
-        
-        <a href="/2017/07/09/python中Excel写入数据/" class="archive-article-date">
-  	<time datetime="2017-07-09T03:44:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##python Excel写入数据</p>
-<pre><code>
-import xlwt
-from xlrd import *
-from xlutils.copy import copy
-from datetime import datetime
-import time
-path = r"H:\pycharm\untitled2\python_study\test\write.xlsx"
-
-def write():
-    """写入单个数据"""
-    rb = xlwt.Workbook()
-    sheet = rb.add_sheet(u'sheet1',cell_overwrite_ok=True)
-    sheet.write(1,1,"foo")        #向第0行第0列写入foo
-    rb.save(path)
-
-def wirte02():
-    """写入一列数据,不能修改"""
-    f = xlwt.Workbook()               #创建工作簿
-    sheet1 = f.add_sheet(u'sheet1',cell_overwrite_ok=True) #创建sheet
-    l_=range(5)
-    x = [42,4,14,14,14]
-    for i in l_:
-        sheet1.write(0,i,x[i])    #write的第一个,第二个参数时坐标, 第三个是要写入的数据
-        sheet1.write(1,i,x[i])
-    #sheet1.write(0,0,start_date,set_style('Times New Roman',220,True))
-    f.save("2.xlsx")#保存文件
-
-def write03():
-    """修改数据"""
-    rb =open_workbook(path)
-    wb = copy(rb)
-    s = wb.get_sheet(0)
-    s.write(0,1,"new data")
-    wb.save("new_data.xls")
-    print ("write finished")
-
-def style1():
-    """设置样式"""
-    font = xlwt.Font()                            # Create the font
-    font.name = 'Times New Roman'
-    font.bold = True
-    font.underline = True
-    font.italic = True
-    font.colour_index = 2
-
-    style0 = xlwt.XFStyle()
-    style0.font = font                           # Add font to Style
-
-    wb = xlwt.Workbook()
-    ws = wb.add_sheet('A Test Sheet')
-
-    style1 = xlwt.XFStyle()
-    style1.num_format_str = 'D-M-Y'
-
-    ws.write(0, 0, 'Test', style0)
-    # ws.write(2, 2, xlwt.Formula("A3+B3"))
-    ws.write(2,2,time.strftime( "%Y-%m-%d %X", time.localtime()),style1)      #写入当前时间,精确到分钟
-    wb.save('example425.xls')
-
-if __name__=="__main__":
-    write()
-    write02()
-    write03()
-    style1()
-</code></pre>
-
-<p>结果<br><img src="https://github.com/paul15342/paul15342.github.io/blob/master/img/index/write.jpg" alt=""><br><img src="https://github.com/paul15342/paul15342.github.io/blob/master/img/index/write02.jpg" alt=""><br><img src="https://github.com/paul15342/paul15342.github.io/blob/master/img/index/write02.jpg" alt=""><br><img src="https://github.com/paul15342/paul15342.github.io/blob/master/img/index/style.png" alt=""></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -242,321 +174,19 @@ if __name__=="__main__":
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/09/python中Excel写入数据/">查看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
   
-    <article id="post-一首音乐" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/21/一首音乐/">一首音乐</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/21/一首音乐/" class="archive-article-date">
-  	<time datetime="2017-05-21T02:44:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一首音乐"><a href="#一首音乐" class="headerlink" title="一首音乐"></a>一首音乐</h3><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=125191&auto=1&height=66"></iframe>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">music</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/21/一首音乐/">查看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-  
-    <article id="post-一张图片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/21/一张图片/">一张图片</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/21/一张图片/" class="archive-article-date">
-  	<time datetime="2017-05-21T02:36:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://wx1.sinaimg.cn/mw690/a2986d9agy1ffroq1mxvtj211y0lc42z.jpg" alt="图片"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">photo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/21/一张图片/">查看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-  
-    <article id="post-MongoDB常用指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/MongoDB常用指令/">MongoDB常用指令</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/15/MongoDB常用指令/" class="archive-article-date">
-  	<time datetime="2017-05-15T14:57:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> <strong>查询</strong> db.col.find().pretty()<br> <strong><em>OR</em></strong>: db.col.find(<br>   {$or: [{key1: value1}, {key2:value2}]}).pretty()<br> <strong><em>AND</em></strong>: db.col.find({key1:value1, key2:value2}).pretty()<br></p>
-        
-          <a class="article-more-a" href="/2017/05/15/MongoDB常用指令/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Two</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/MongoDB常用指令/">查看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-  
-    <article id="post-github与域名绑定" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/15/github与域名绑定/">Github + Hexo</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/15/github与域名绑定/" class="archive-article-date">
-  	<time datetime="2017-05-15T14:57:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong> Github 和 个人域名绑定</strong></p>
-<p><strong>第一步</strong>,在阿里云购买自己的域名,在域名列表中选中需要绑定的域名解析,如下图:<br></p>
-        
-          <a class="article-more-a" href="/2017/05/15/github与域名绑定/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ONE</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/15/github与域名绑定/">查看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-  
-    <article id="post-My-first-Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/14/My-first-Blog/">My first Blog</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/14/My-first-Blog/" class="archive-article-date">
-  	<time datetime="2017-05-14T04:59:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>搭建github + Hexo 个人博客</strong><br><strong>一:安装 (Hexo文件夹中打开Git Bash Here)</strong><br>输入一下密令:<br><strong>npm install -g hexo</strong><br></p>
-        
-          <a class="article-more-a" href="/2017/05/14/My-first-Blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ONE</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/14/My-first-Blog/">查看全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-  
-  
 
 
 
@@ -579,10 +209,10 @@ if __name__=="__main__":
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
