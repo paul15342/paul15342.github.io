@@ -156,79 +156,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>###一: 封装log模块, 在自动化测试中日志输出,在配置文件中配置需输出的位置 ,  1为输出, 0不输出。</p>
-<p>1.console_output_on = 1 输出到控制台 <br><br>2.file_output_on =1  输出到txt文件中 <br><br>3.configparser 模块可以从配置文件中获取数据 <br></p>
-<pre><code>
-import logging
-import sys
-import configparser
-
-class Log:
-    def __init__(self):
-        pass
-
-    def __new__(cls):     #new 在__init__之前,cls._instance可看作为class添加属性
-        if  not hasattr(cls,'instance'):
-            cls._instance = super(Log, cls).__new__(cls)
-            conf = configparser.ConfigParser()
-            conf.read('log_config.ini',encoding='utf-8')
-            cls._instance.level = conf.get('logging','level')
-            cls._instance.name = conf.get('logging', 'logger_name')
-            cls._instance.path = conf.get('logging', 'file_path')
-            cls._instance.formatter = conf.get('logging', 'formatter')
-            cls._instance.format = cls._instance.formatter.replace('|', '%')
-            cls._instance.console_output_on = conf.getint('logging', 'console_output_on')
-            cls._instance.file_output_on = conf.getint('logging', 'file_output_on')
-            cls._instance.logger =logging.getLogger('test')
-            cls._instance.log()
-        return cls._instance
-
-
-    def get_log(self):
-        return self.logger
-
-
-    def log(self):
-        if self.console_output_on == 1:
-            self.logger.setLevel(self.level)
-            # 设置log.txt路径
-            #设置控制台输出日志
-            sh = logging.StreamHandler(sys.stderr)
-            # 设置格式
-            formatter = logging.Formatter(self.format)
-            sh.setFormatter(formatter)
-            self.logger.addHandler(sh)
-
-        if  self.file_output_on==1:
-            self.logger.setLevel(self.level)
-            # 设置log.txt路径
-            # 设置文件输入日志地址
-            #最多备份5个日志文件，每个日志文件最大10M,这个Handler类似于上面的FileHandler，但是它可以管理文件大小。
-            # 当文件达到一定大小之后，它会自动将当前日志文件改名，然后创建 一个新的同名日志文件继续输出
-            #fh = logging.RotatingFileHandler(self.path,maxBytes=10*1024*1024,backupCount=5)
-            fh = logging.FileHandler(self.path)
-            # 设置格式
-            formatter = logging.Formatter(self.format)
-            fh.setFormatter(formatter)
-            self.logger.addHandler(fh)
-            return self.logger
-
-log = Log().get_log()
-
-</code></pre>
-
-<p>###二:配置文件设置 </p>
-<p><pre><code><br>[logging]<br>level=DEBUG<br>logger_name=test<br>file_path=H:\pycharm\untitled2\python_study\log\log.txt<br>formatter=[|(asctime)s]:|(filename)s  [line:|(lineno)d] |(levelname)s : |(message)s |(funcName)s<br>console_output_on=1<br>file_output_on=1</code></pre></p>
-<p>[level]<br>level: debug, info,warning,error,critical<br></p>
-<p>###三:测试文件</p>
-<p><pre><code><br>from log.Log import *<br>import codecs<br>log.info(‘this is testing’)</code></pre></p>
-<p>def fun(x,y):<br>    “””随意测试”””<br>    return x/y</p>
-<p>try:<br>    fun(2,0) &gt;0<br>except Exception as e:</p>
-<pre><code> #直接调用封装好的log输入日志
-log.error(&apos;分母不能为0 {}&apos;.format(e)) 
-</code></pre><p></p>
-<p>###四:日志输出 log.txt<br><img src="http://i.imgur.com/nazmWpD.jpg" alt=""></p>
-<p>###五:文件目录<br><img src="http://i.imgur.com/1Bgviow.jpg" alt=""></p>
-
+<p>1.console_output_on = 1 输出到控制台 <br><br>2.file_output_on =1  输出到txt文件中 <br><br>3.configparser 模块可以从配置文件中获取数据 <br><br></p>
+        
+          <a class="article-more-a" href="/2017/08/06/log日志封装/#more">more >></a>
+        
       
 
       
